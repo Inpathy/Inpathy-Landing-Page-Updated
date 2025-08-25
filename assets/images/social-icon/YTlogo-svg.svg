@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 38" width="54" height="38">
+	<title>YT logo-svg</title>
+	<style>
+		.s0 { fill: #a8a6a6 } 
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#ffb5a7" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="YT logo" filter="url(#f0)">
+		<path id="Combined Shape" fill-rule="evenodd" class="s0" d="m47.3 1.5c-4.1-1.1-20.6-1.1-20.6-1.1 0 0-16.5 0-20.6 1.1-2.3 0.6-4 2.4-4.7 4.7-1.1 4.1-1.1 12.8-1.1 12.8 0 0 0 8.6 1.2 12.7 0.6 2.3 2.4 4.1 4.6 4.7 4.1 1.1 20.6 1.1 20.6 1.1 0 0 16.5 0 20.6-1.1 2.3-0.6 4.1-2.4 4.7-4.7 1.1-4.1 1.1-12.7 1.1-12.7 0 0 0-8.7-1.1-12.8-0.6-2.3-2.4-4.1-4.7-4.7zm-12.2 17.5l-13.8 7.8v-15.7z"/>
+	</g>
+</svg>

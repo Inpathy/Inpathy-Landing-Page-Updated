@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="61px" viewBox="0 0 122 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>TC</title>
+    <defs>
+        <polygon id="path-1" points="2114.63395 18.3565544 2114.63395 28.4309452 2134.78273 28.4309452 2134.78273 68.7231724 2154.93152 68.7231724 2154.93152 28.4309452 2175.0803 28.4309452 2175.0803 68.7231724 2235.52131 68.7231724 2235.52131 48.5743908 2195.22908 48.5743908 2195.22908 28.4256092 2235.52131 28.4256092 2235.52131 8.27682755 2195.22908 8.27682755 2195.22908 28.4256092 2175.0803 28.4256092 2175.0803 8.27682755 2114.63929 8.27682755 2114.63929 18.3512184"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Press-Social-Copy" transform="translate(-2113.7439, -8)" fill="#FFB5A7" fill-rule="nonzero">
+            <g id="TC">
+                <use xlink:href="#path-1"></use>
+                <use xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
