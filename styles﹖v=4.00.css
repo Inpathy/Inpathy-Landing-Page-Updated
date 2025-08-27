@@ -27,7 +27,7 @@
   --gray: #929292;
   --text: #828282;
   --dark-grey: #5f5f5f;
-  --hover-pink: #ffb5a7; /* Added for hover effect color */
+  --hover-pink: #ffb5a7;
 }
 a {
   text-decoration: none;
@@ -387,23 +387,28 @@ section {
   align-items: center;
   gap: 4.41vw;
 }
-.footer-menu-inner a {
-  font-size: 21px;
-  letter-spacing: 1px;
+.footer-menu-inner a.footer-icon {
+  display: flex;
   position: relative;
-  transition: color 0.09s linear;
 }
-.footer-menu-inner a:hover {
-  color: var(--hover-pink);
+.footer-menu-inner img {
+  height: 17.2px;
+  transition: opacity 0.15s ease-in-out;
 }
-.footer-menu-inner a .hover {
-  display: none;
+.footer-menu-inner img.default {
+  opacity: 1;
 }
-.footer-menu-inner a:hover .default {
-  display: none;
+.footer-menu-inner img.hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.footer-menu-inner a:hover .hover {
-  display: inline;
+.footer-menu-inner a:hover img.default {
+  opacity: 0;
+}
+.footer-menu-inner a:hover img.hover {
+  opacity: 1;
 }
 .social-share {
   display: flex;
@@ -414,6 +419,7 @@ section {
 }
 .social-icon {
   display: flex;
+  position: relative;
 }
 .social-share a {
   transition: all 0.09s linear;
@@ -421,13 +427,22 @@ section {
 .social-share img {
   height: 38px;
   width: auto;
+  transition: opacity 0.15s ease-in-out;
 }
-.social-share img.hover,
+.social-share img.default {
+  opacity: 1;
+}
+.social-share img.hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .social-share a:hover img.default {
-  display: none;
+  opacity: 0;
 }
 .social-share a:hover img.hover {
-  display: block;
+  opacity: 1;
 }
 .copy-right-text {
   display: flex;
@@ -436,23 +451,26 @@ section {
 .copy-right-text img {
   height: 1.04vw;
   line-height: 1;
+  transition: opacity 0.15s ease-in-out;
 }
 .copy-right-text a {
   display: flex;
   position: relative;
 }
 .copy-right-text img.default {
-  display: block;
+  opacity: 1;
 }
 .copy-right-text img.hover {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .copy-right-text a:hover img.default {
-  display: none;
+  opacity: 0;
 }
 .copy-right-text a:hover img.hover {
-  display: block;
-  transition: color 0.09s linear;
+  opacity: 1;
 }
 
 /* Responsive */
@@ -543,10 +561,11 @@ section {
   .social-share img {
     height: 2.2265625vw;
   }
-  .footer-menu-inner a {
-    font-size: 1.292vw;
+  .footer-menu-inner img {
+    height: 1.292vw;
   }
 }
+
 /* MacBook Air M1 13-inch (1440 x 848) */
 @media only screen and (min-width: 1440px) {
   .social-share {
@@ -572,9 +591,8 @@ section {
   .stressed {
     right: 10vw;
   }
-  .footer-menu-inner a {
-    font-size: 16px;
-    letter-spacing: 1px;
+  .footer-menu-inner img {
+    height: 16px;
   }
   .social-share img {
     height: 32px;
@@ -589,6 +607,10 @@ section {
   .org-circle-con lottie-player {
     width: 230px !important;
     height: 230px !important;
+  }
+  .footer-menu-inner img {
+    height: 14.2px;
+    transition: opacity 0.15s ease-in-out;
   }
   .hd1 {
     margin: 1.5vw auto 40px;
@@ -643,8 +665,8 @@ section {
   .footer-menu-inner {
     gap: 45px;
   }
-  .footer-menu-inner a {
-    font-size: 16px;
+  .footer-menu-inner img {
+    height: 16px;
   }
 }
 
@@ -699,11 +721,8 @@ section {
   .social-share img {
     height: 25px;
   }
-  .footer-menu-inner a {
-    font-size: 14.3px;
-  }
-  .logo-slider-con .logo-slide {
-    margin: 0 67px;
+  .footer-menu-inner img {
+    height: 14.3px;
   }
   .logo-slide img {
     max-height: 30px;
@@ -735,8 +754,18 @@ section {
     height: 100svh;
     min-height: 550px;
   }
-  .slide-img-text {
+  /* .slide-img-text {
+    width: 100%;
+    height: 100vh;
+    position: relative;
     transform: translateY(-32vh);
+    transition: transform 0.1s linear;
+    z-index: 9;
+    will-change: transform;
+    transform-style: preserve-3d;
+  } */
+  .slide-img-text {
+    transform: translateY(-36vh);
   }
   .banner-wrap {
     max-width: 88%;
@@ -800,11 +829,8 @@ section {
   .footer-section .cta-wrap {
     margin-bottom: 110px;
   }
-  .footer-menu-inner a {
-    font-size: 16px;
-  }
-  .logo-slider-con .logo-slide {
-    margin: 0 53px;
+  .footer-menu-inner img {
+    height: 16px;
   }
   .logo-slide img {
     max-height: 30px;
@@ -919,8 +945,8 @@ section {
   .carousel-track {
     padding: 80px 0;
   }
-  .footer-menu-inner a {
-    font-size: 9px;
+  .footer-menu-inner img {
+    height: 9px;
   }
   .copy-right-text img {
     height: 1.2vw;
@@ -967,6 +993,7 @@ section {
   .overwhelmed {
     display: none;
   }
+
   .hd1 {
     margin: 76px auto 11px;
   }
@@ -1050,9 +1077,8 @@ section {
   .footer-section .cta-wrap {
     margin-bottom: 76px;
   }
-  .footer-menu-inner a {
-    font-size: 14px;
-    letter-spacing: 0.7px;
+  .footer-menu-inner img {
+    height: 12px;
   }
   .copy-right-text img {
     height: 15.02px;
