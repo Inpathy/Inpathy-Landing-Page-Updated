@@ -1139,3 +1139,30 @@ section {
     opacity: 1;
   }
 }
+
+/* Ensure consistent footer layout across screen sizes */
+.footer-sec-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer-menu-inner {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.social-share {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-share img {
+  width: 40px;
+  height: 40px;
+}
