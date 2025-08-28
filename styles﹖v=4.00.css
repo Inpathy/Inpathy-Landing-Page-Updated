@@ -1,93 +1,1141 @@
+@font-face {
+  font-family: "Gotham Rounded Bold";
+  src: url(assets/font/gothamrnd_bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url(assets/font/gothamrnd_medium.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url(assets/font/gothamrnd_book.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url(assets/font/gothamrnd_light.otf);
+  font-weight: 300;
+  font-style: normal;
+}
 
-/* Global Styles */
+:root {
+  --gray: #929292;
+  --text: #828282;
+  --dark-grey: #5f5f5f;
+  --hover-pink: #ffb5a7;
+}
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 body {
+  font-family: "Gotham Rounded Bold";
+  font-weight: 700;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+}
+.banner-section {
+  height: 100svh;
+  min-height: 900px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+.banner-wrap {
+  padding: 5.21% 0 0;
+  width: 100%;
+  height: 100%;
+  max-width: calc(100% - 8vw);
+  margin: 0 auto;
+}
+.banner-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.heading-con {
+  position: relative;
+  z-index: 2;
+}
+.hd1 {
+  margin: 70px auto 40px;
+  display: flex;
+  justify-content: center;
+}
+.hd1 lottie-player {
+  width: 100% !important;
+  height: 15vw !important;
+}
+.org-circle-con {
+  margin: 0 auto;
+  width: 89px;
+  height: 89px;
+  position: relative;
+}
+.org-circle-con lottie-player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.desk {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+/* CTA */
+.cta-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+.cta {
+  gap: 10px;
+  background-color: #ffb5a7;
+  border-radius: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.66vw 2.99vw;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 0 16px 60px #ff5f444d;
+  color: #ffffff;
+  text-decoration: none;
+}
+.cta:hover {
+  box-shadow: 0 24px 80px 15px #ff5f444d;
+}
+.cta .btn-icon {
+  margin-top: -0.3vw;
+  height: 1.54vw;
+}
+.cta .btn-txt img {
+  height: 1vw;
+  margin-top: 0.5vw;
+}
+
+/* banner images */
+.banner-images-con {
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  top: -7px;
+}
+.banner-images {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  position: relative;
+  height: 100%;
+}
+.banner-img {
+  width: fit-content;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  opacity: 0;
+}
+.banner-img img {
+  height: 3.69vw;
+  object-fit: contain;
+}
+.calm {
+  right: 14rem;
+  animation-delay: 0.2s;
+}
+.hopeful {
+  top: 10px;
+  left: 14rem;
+  animation-delay: 0.3s;
+}
+.jealous {
+  top: 20px;
+  animation-delay: 0.4s;
+}
+.inspired {
+  width: 100%;
+  animation-delay: 0.5s;
+}
+.inspired img {
+  position: absolute;
+  right: 0;
+}
+.balanced {
+  left: 14rem;
+  top: 20px;
+  animation-delay: 0.6s;
+}
+.stressed {
+  right: 11rem;
+  animation-delay: 0.7s;
+}
+.depressed {
+  left: 4vw;
+  animation-delay: 0.8s;
+}
+.overwhelmed {
+  animation-delay: 0.9s;
+}
+
+/* Slider Section */
+.slider-section {
+  position: relative;
+  width: 100%;
+  min-height: 900vh;
+}
+.slider-sec-inner {
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+.slider-content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.slide-img-text {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transform: translateY(-32vh);
+  transition: transform 0.1s linear;
+  z-index: 9;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+.slider-bg {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: opacity;
+}
+.bg-1 {
+  background-image: radial-gradient(circle at 0 0, #ffd5ce, #ffb1a3);
+  opacity: 1 !important;
+}
+.bg-2 {
+  background-image: radial-gradient(circle at 0 0, #a3e3ff, #35c1ff);
+  opacity: 0;
+}
+.bg-3 {
+  background-image: radial-gradient(circle at 0 0, #b5c1ee, #748adf);
+  opacity: 0;
+}
+.bg-4 {
+  background-image: radial-gradient(circle at 0 0, #ff968b, #ff6455);
+  opacity: 0;
+}
+.bg-5 {
+  background-image: radial-gradient(circle at 0 0, #ffbaa2, #ff7d50);
+  opacity: 0;
+}
+.dots {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  flex-direction: column;
+  z-index: 9;
+}
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+.dot.active {
+  opacity: 1;
+}
+.slider-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 3.56vw;
+  line-height: 1.1;
+  text-shadow: 0 0 58px rgb(0 0 0 / 19%);
+  color: #fff;
+  opacity: 0;
+  z-index: 10;
+  will-change: opacity;
+}
+.slider-text.active {
+  opacity: 1;
+}
+.slider-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  will-change: opacity;
+}
+.slider-img.sm-1 {
+  opacity: 1 !important;
+  width: calc(100% -2px);
+}
+.slider-img img {
+  height: calc(100vh - 111px);
+  width: auto;
+  box-shadow: 40px 60px 200px #00000012;
+  border-radius: 5.1vh;
+  will-change: opacity;
+}
+.slider-img.sm-1 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: filter, opacity;
+}
+.slider-img.sm-1 img.light {
+  z-index: 9;
+}
+
+/* Footer Section */
+.footer-sec-inner {
+  padding-bottom: 6vh;
+}
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
   background: #fff;
-  color: #000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-/* Footer Section Cleanup */
-.footer-section {
-  padding: 60px 0 30px;
+.carousel-track {
+  position: relative;
+  height: 100%;
+  padding: 11.1vw 0;
 }
-
+.carousel-slide {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+.logo-slider-con .logo-slide {
+  margin: 0 105px;
+}
+.logo-slide a {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.logo-slide img {
+  max-height: 50px;
+  transition: all 0.3s linear;
+}
+.logo-slide img.pink {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.logo-slide:hover img.pink {
+  visibility: visible;
+  opacity: 1;
+}
+.logo-slide:hover img.dark {
+  visibility: hidden;
+  opacity: 0;
+}
+.logo-slide.all-tech img,
+.logo-slide.pc-mag img,
+.logo-slide.abc img {
+  max-height: 60px;
+}
+.footer-section .cta-wrap {
+  margin-bottom: 14vh;
+}
 .footer-menu-inner {
   display: flex;
   justify-content: center;
-  gap: 80px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 4.41vw;
 }
-
-.footer-icon img,
-.social-icon img {
-  width: 38px;
-  height: auto;
-  transition: opacity 0.3s ease;
+.footer-menu-inner a.footer-icon {
+  display: flex;
+  position: relative;
 }
-
-.footer-icon .hover,
-.social-icon .hover {
-  display: none;
+.footer-menu-inner img {
+  height: 17.2px;
+  transition: opacity 0.15s ease-in-out;
 }
-
-.footer-icon:hover .default,
-.social-icon:hover .default {
-  display: none;
+.footer-menu-inner img.default {
+  opacity: 1;
 }
-
-.footer-icon:hover .hover,
-.social-icon:hover .hover {
-  display: inline;
+.footer-menu-inner img.hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-
+.footer-menu-inner a:hover img.default {
+  opacity: 0;
+}
+.footer-menu-inner a:hover img.hover {
+  opacity: 1;
+}
 .social-share {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+  gap: 6.83vw;
+  margin: 96.9px auto;
 }
-
+.social-icon {
+  display: flex;
+  position: relative;
+}
+.social-share a {
+  transition: all 0.09s linear;
+}
+.social-share img {
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+}
+.social-share img.default {
+  opacity: 1;
+}
+.social-share img.hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.social-share a:hover img.default {
+  opacity: 0;
+}
+.social-share a:hover img.hover {
+  opacity: 1;
+}
 .copy-right-text {
-  text-align: center;
-  font-size: 14px;
-  color: #888;
+  display: flex;
+  justify-content: center;
+}
+.copy-right-text img {
+  height: 1.04vw;
+  line-height: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+.copy-right-text a {
+  display: flex;
+  position: relative;
+}
+.copy-right-text img.default {
+  opacity: 1;
+}
+.copy-right-text img.hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.copy-right-text a:hover img.default {
+  opacity: 0;
+}
+.copy-right-text a:hover img.hover {
+  opacity: 1;
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 1440px) {
-  .footer-menu-inner {
-    gap: 60px;
-    margin-bottom: 24px;
+/* Responsive */
+@media only screen and (min-width: 1921px) {
+  .banner-section {
+    min-height: 50vw;
   }
-
+  .banner-wrap {
+    max-width: 89.87%;
+  }
+  .banner-img img {
+    height: 3.671875vw;
+  }
+  .org-circle-con {
+    width: 4.72vw;
+    height: 4.72vw;
+  }
+  .org-circle-con lottie-player {
+    width: 16vw !important;
+    height: 16vw !important;
+  }
+  .hd1 {
+    margin: 7vh auto 1vh;
+  }
+  .hd1 lottie-player {
+    height: 15.5vw !important;
+  }
+  .cta {
+    gap: 0.78vw;
+  }
+  .cta .btn-txt {
+    font-size: 1.08vw;
+  }
+  .banner-images-con {
+    height: 81.25%;
+  }
+  .banner-images {
+    gap: 18%;
+  }
+  .hopeful {
+    left: 11vw;
+  }
+  .calm {
+    right: 11vw;
+  }
+  .balanced {
+    left: 16vw;
+  }
+  .stressed {
+    right: 14vw;
+  }
+  .jealous {
+    top: 3vh;
+  }
+  .slider-text {
+    text-shadow: 0 0 4vw rgb(0 0 0 / 19%);
+  }
+  .slider-img img {
+    height: 89.167vh;
+    border-radius: 5.2vh;
+  }
+  .dots {
+    gap: 1.367vw;
+  }
+  .dot {
+    width: 0.78125vw;
+    height: 0.78125vw;
+  }
+  .footer-section {
+    padding-bottom: 0;
+    height: 100vh;
+  }
+  .footer-section .footer-sec-inner {
+    padding-bottom: 8.68vh;
+  }
+  .logo-slide img {
+    max-height: 2.63671875vw;
+    height: 100%;
+    object-fit: contain;
+  }
+  .logo-slider-con .logo-slide {
+    margin: 0 70px;
+  }
   .social-share {
-    gap: 60px;
-    margin-bottom: 24px;
+    gap: 6.9921875vw;
+    margin: 8.68vh auto;
   }
-
-  .footer-icon img,
-  .social-icon img {
-    width: 34px;
+  .social-share img {
+    height: 2.2265625vw;
+  }
+  .footer-menu-inner img {
+    height: 1.292vw;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .footer-menu-inner {
-    gap: 40px;
-  }
-
+/* MacBook Air M1 13-inch (1440 x 848) */
+@media only screen and (min-width: 1440px) {
   .social-share {
-    gap: 40px;
+    margin: 96.9px auto;
+    height: 44.59px;
+  }
+  .footer-menu-inner {
+    gap: 4vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .slider-img img {
+    box-shadow: 40px 60px 200px rgba(0, 0, 0, 0.07);
+  }
+}
+
+@media only screen and (max-width: 1680px) {
+  .balanced {
+    left: 14vw;
+    top: 20px;
+  }
+  .stressed {
+    right: 10vw;
+  }
+  .footer-menu-inner img {
+    height: 16px;
+  }
+  .social-share img {
+    height: 32px;
+  }
+}
+
+/* MacBook Air M1 13-inch (1440 x 848) */
+@media only screen and (max-width: 1440px) {
+  .banner-section {
+    min-height: 700px;
+  }
+  .org-circle-con lottie-player {
+    width: 230px !important;
+    height: 230px !important;
+  }
+  .footer-menu-inner img {
+    height: 14.2px;
+    transition: opacity 0.15s ease-in-out;
+  }
+  .hd1 {
+    margin: 1.5vw auto 40px;
+  }
+  .hopeful {
+    left: 11rem;
+  }
+  .balanced {
+    left: 14.5vw;
+  }
+  .calm {
+    right: 10.5rem;
+    top: 16px;
+  }
+  .dots {
+    left: 25px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .org-circle-con {
+    width: 55px;
+    height: 55px;
+  }
+  .org-circle-con lottie-player {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  .cta .btn-txt {
+    font-size: 16px;
+  }
+  .dots {
+    gap: 17px;
+    left: 25px;
+  }
+  .dot {
+    width: 10.27px;
+    height: 10.27px;
+  }
+  .slider-img img {
+    height: 80.63vh;
+  }
+  .logo-slide img {
+    max-height: 45px;
+  }
+  .social-share {
+    gap: 75px;
+  }
+  .social-share img {
+    height: 30px;
+  }
+  .footer-menu-inner {
+    gap: 45px;
+  }
+  .footer-menu-inner img {
+    height: 16px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .banner-section {
+    min-height: 550px;
+  }
+  .banner-wrap {
+    padding-top: 40px;
+    max-width: 990px;
+  }
+  .org-circle-con {
+    width: 51px;
+    height: 51px;
+  }
+  .org-circle-con lottie-player {
+    width: 166px !important;
+    height: 166px !important;
+  }
+  .banner-images-con {
+    top: 20px;
+  }
+  .banner-img img {
+    height: 40px;
+  }
+  .hopeful {
+    left: 9rem;
+  }
+  .calm {
+    right: 9rem;
+  }
+  .balanced {
+    left: 13rem;
+  }
+  .stressed {
+    right: 10rem;
+  }
+  .cta {
+    gap: 7px;
+    padding: 9px 32.5px;
+  }
+  .cta .btn-icon {
+    height: 14px;
+  }
+  .cta .btn-txt img {
+    height: 11.69px;
+    margin-top: 5px;
+  }
+  .social-share {
+    margin: 56px auto;
+  }
+  .social-share img {
+    height: 25px;
+  }
+  .footer-menu-inner img {
+    height: 14.3px;
+  }
+  .logo-slide img {
+    max-height: 30px;
+  }
+  .logo-slide.all-tech img,
+  .logo-slide.pc-mag img,
+  .logo-slide.abc img,
+  .logo-slide.fox-business img {
+    max-height: 35px;
+  }
+  .carousel-track {
+    padding: 112px 0;
+  }
+  .footer-sec-inner {
+    padding-bottom: 65px;
+  }
+}
+
+@media only screen and (max-width: 1280px) and (orientation: portrait) {
+  .org-circle-con {
+    width: 70px;
+    height: 70px;
+  }
+  .org-circle-con lottie-player {
+    width: 220px !important;
+    height: 220px !important;
+  }
+  .banner-section {
+    height: 100svh;
+    min-height: 550px;
+  }
+  /* .slide-img-text {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transform: translateY(-32vh);
+    transition: transform 0.1s linear;
+    z-index: 9;
+    will-change: transform;
+    transform-style: preserve-3d;
+  } */
+  .slide-img-text {
+    transform: translateY(-36vh);
+  }
+  .banner-wrap {
+    max-width: 88%;
+    padding-top: 85px;
+  }
+  .banner-img img {
+    height: 66px;
+  }
+  .jealous,
+  .calm,
+  .inspired,
+  .overwhelmed {
+    display: none;
+  }
+  .hd1 {
+    margin: 75px auto 27px;
+  }
+  .hd1 lottie-player {
+    height: 220px !important;
+  }
+  .hopeful {
+    left: 0;
+  }
+  .balanced {
+    left: unset;
+    right: 0;
+  }
+  .stressed {
+    right: 0;
+    left: unset;
+    position: absolute;
+    top: 480px;
+  }
+  .depressed {
+    left: 0;
+    position: absolute;
+    top: 438px;
+  }
+  .cta {
+    gap: 7px;
+    padding: 12px 45px;
+  }
+  .cta .btn-icon {
+    height: 23px;
+    margin-top: -4px;
+  }
+  .cta .btn-txt img {
+    height: 15.69px;
+    margin-top: 7px;
+  }
+  .slider-text {
+    font-size: 6.76vw;
+    line-height: 1.1;
+  }
+  .dots {
+    left: 34px;
+  }
+  .footer-section {
+    min-height: unset;
+  }
+  .footer-section .cta-wrap {
+    margin-bottom: 110px;
+  }
+  .footer-menu-inner img {
+    height: 16px;
+  }
+  .logo-slide img {
+    max-height: 30px;
+  }
+  .logo-slide.all-tech img,
+  .logo-slide.pc-mag img,
+  .logo-slide.abc img,
+  .logo-slide.fox-business img {
+    max-height: 35px;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (orientation: landscape) {
+  .banner-section {
+    min-height: 550px;
+  }
+}
+
+@media only screen and (max-width: 991px) and (orientation: landscape) {
+  .banner-section {
+    min-height: 430px;
+  }
+  .banner-wrap {
+    padding-top: 45px;
+    max-width: 86.17%;
+  }
+  .org-circle-con {
+    width: 40px;
+    height: 40px;
+  }
+  .org-circle-con lottie-player {
+    width: 130px !important;
+    height: 130px !important;
+  }
+  .hd1 {
+    margin: 40px auto 14px;
+  }
+  .hd1 lottie-player {
+    height: 120px !important;
+  }
+  .cta .btn-txt {
+    font-size: 10px;
+  }
+  .cta .btn-icon {
+    height: 12px;
+  }
+  .cta {
+    padding: 8px 23.5px;
+  }
+  .cta .btn-txt img {
+    height: 8.69px;
+    margin-top: 2px;
+  }
+  .banner-img img {
+    height: 29px;
+  }
+  .hopeful {
+    left: 7rem;
+  }
+  .calm {
+    right: 7rem;
+  }
+  .jealous {
+    top: 7px;
+  }
+  .balanced {
+    left: 8rem;
+    top: 13px;
+  }
+  .stressed {
+    right: 5rem;
+  }
+  .slider-img img {
+    height: 91vh;
+  }
+  .slider-text {
+    font-size: 29.55px;
+  }
+  .dots {
+    left: 30px;
+    gap: 12px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+  .footer-section {
+    height: unset;
+  }
+  .footer-sec-inner {
+    padding-bottom: 35px;
+  }
+  .logo-slide img {
+    max-height: 25px;
+  }
+  .logo-slider-con .logo-slide {
+    margin: 0 55px;
+  }
+  .logo-slide.all-tech img,
+  .logo-slide.pc-mag img,
+  .logo-slide.abc img,
+  .logo-slide.fox-business img {
+    max-height: 30px;
+  }
+  .social-share {
+    margin: 35px auto;
+    gap: 50px;
+  }
+  .social-share img {
+    height: 16.55px;
+  }
+  .carousel-track {
+    padding: 80px 0;
+  }
+  .footer-menu-inner img {
+    height: 9px;
+  }
+  .copy-right-text img {
+    height: 1.2vw;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .desk {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .banner-section {
+    height: 100svh;
+    min-height: 710px;
+  }
+  .org-circle-con {
+    width: 50px;
+    height: 50px;
+  }
+  .org-circle-con lottie-player {
+    width: 160px !important;
+    height: 160px !important;
+  }
+  .round_circle {
+    box-shadow: 0 18px 45px 0 #ff5f447d;
+  }
+  .banner-wrap {
+    max-width: 83.8%;
+    padding-top: 60px;
+  }
+  .banner-img,
+  .banner-images,
+  .banner-images-con {
+    height: fit-content;
+  }
+  .banner-img img {
+    height: 40px;
+  }
+  .jealous,
+  .calm,
+  .inspired,
+  .overwhelmed {
+    display: none;
   }
 
-  .footer-icon img,
-  .social-icon img {
-    width: 30px;
+  .hd1 {
+    margin: 76px auto 11px;
+  }
+  .hd1 lottie-player {
+    height: 27vw !important;
+  }
+  .banner-images-con {
+    top: 50px;
+  }
+  .hopeful {
+    left: 0;
+  }
+  .balanced {
+    left: unset;
+    right: 0;
+  }
+  .stressed {
+    right: 0;
+    left: unset;
+    position: absolute;
+    top: 315px;
+  }
+  .depressed {
+    left: 10px;
+    position: absolute;
+    top: 280px;
+  }
+  .cta {
+    gap: 7px;
+    padding: 10px 35.5px;
+  }
+  .cta .btn-icon {
+    height: 19px;
+    margin-top: -4px;
+  }
+  .cta .btn-txt img {
+    height: 12px;
+    margin-top: 5px;
+  }
+  .slider-text {
+    font-size: 6.76vw;
+    text-shadow: 0 0 58px rgb(0 0 0 / 41%);
+  }
+  .dots {
+    left: 15px;
+  }
+  .slider-img img {
+    height: auto;
+    max-width: 300px;
+    object-fit: contain;
+  }
+  .logo-slider-con .logo-slide {
+    margin: 0 41px;
+  }
+  .logo-slide img {
+    max-height: 26px;
+  }
+  .logo-slide.all-tech img,
+  .logo-slide.abc img,
+  .logo-slide.pc-mag img {
+    max-height: 35px;
+  }
+  .logo-slide.fox-business img {
+    max-height: 30px;
+  }
+  .social-share {
+    gap: 70.5px;
+  }
+  .social-share img {
+    height: 23px;
+  }
+  .footer-section {
+    min-height: unset;
+  }
+  .footer-sec-inner {
+    padding-bottom: 50px;
+  }
+  .carousel-track {
+    padding: 92px 0;
+  }
+  .footer-section .cta-wrap {
+    margin-bottom: 76px;
+  }
+  .footer-menu-inner img {
+    height: 12px;
+  }
+  .copy-right-text img {
+    height: 15.02px;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .slider-img img {
+    height: 91vh;
+  }
+  .hd1 lottie-player {
+    height: 100px !important;
+  }
+  .slider-text {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .copy-right-text img {
+    height: 3.1vw;
+  }
+  .slider-img.sm-1 img {
+    box-shadow: 40px 60px 2004px #00000047;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .banner-section {
+    min-height: 590px;
+  }
+  .cta {
+    gap: 7px;
+    padding: 9px 22px;
+  }
+  .banner-wrap {
+    padding-top: 26px;
+  }
+  .org-circle-con {
+    width: 35px;
+    height: 35px;
+  }
+  .org-circle-con lottie-player {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .slider-img img {
+    max-width: calc(100% - 60px);
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
