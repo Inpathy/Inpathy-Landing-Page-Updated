@@ -428,6 +428,12 @@ section {
   height: 38px;
   width: auto;
   transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .social-share img.default {
   opacity: 1;
@@ -559,8 +565,16 @@ section {
     margin: 8.68vh auto;
   }
   .social-share img {
-    height: 2.2265625vw;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .footer-menu-inner img {
     height: 1.292vw;
   }
@@ -595,8 +609,16 @@ section {
     height: 16px;
   }
   .social-share img {
-    height: 32px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
 }
 
 /* MacBook Air M1 13-inch (1440 x 848) */
@@ -660,8 +682,16 @@ section {
     gap: 75px;
   }
   .social-share img {
-    height: 30px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .footer-menu-inner {
     gap: 45px;
   }
@@ -719,8 +749,16 @@ section {
     margin: 56px auto;
   }
   .social-share img {
-    height: 25px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .footer-menu-inner img {
     height: 14.3px;
   }
@@ -930,8 +968,16 @@ section {
     gap: 50px;
   }
   .social-share img {
-    height: 16.55px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .carousel-track {
     padding: 80px 0;
   }
@@ -1052,8 +1098,16 @@ section {
     gap: 70.5px;
   }
   .social-share img {
-    height: 23px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .footer-section {
     min-height: unset;
   }
@@ -1218,8 +1272,16 @@ section {
     margin: 90px auto;
   }
   .social-share img {
-    height: 36px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .footer-menu-inner {
     gap: 4.2vw;
   }
@@ -1330,8 +1392,16 @@ section {
     margin: 80px auto;
   }
   .social-share img {
-    height: 32px;
-  }
+  height: 38px;
+  width: auto;
+  transition: opacity 0.15s ease-in-out;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
   .footer-menu-inner {
     gap: 4vw;
   }
@@ -1350,5 +1420,11 @@ section {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .social-share img.hover {
+    display: none !important;
   }
 }
