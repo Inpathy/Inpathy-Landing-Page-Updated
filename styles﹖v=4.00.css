@@ -428,12 +428,6 @@ section {
   height: 38px;
   width: auto;
   transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
 }
 .social-share img.default {
   opacity: 1;
@@ -565,16 +559,8 @@ section {
     margin: 8.68vh auto;
   }
   .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+    height: 2.2265625vw;
+  }
   .footer-menu-inner img {
     height: 1.292vw;
   }
@@ -583,11 +569,11 @@ section {
 /* MacBook Air M1 13-inch (1440 x 848) */
 @media only screen and (min-width: 1440px) {
   .social-share {
-    margin: 96.9px auto;
+    margin: 80px auto;
     height: 44.59px;
   }
   .footer-menu-inner {
-    gap: 4vw;
+    gap: 5vw;
   }
 }
 
@@ -609,16 +595,8 @@ section {
     height: 16px;
   }
   .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+    height: 32px;
+  }
 }
 
 /* MacBook Air M1 13-inch (1440 x 848) */
@@ -682,16 +660,8 @@ section {
     gap: 75px;
   }
   .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+    height: 30px;
+  }
   .footer-menu-inner {
     gap: 45px;
   }
@@ -749,16 +719,8 @@ section {
     margin: 56px auto;
   }
   .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+    height: 25px;
+  }
   .footer-menu-inner img {
     height: 14.3px;
   }
@@ -792,6 +754,16 @@ section {
     height: 100svh;
     min-height: 550px;
   }
+  /* .slide-img-text {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transform: translateY(-32vh);
+    transition: transform 0.1s linear;
+    z-index: 9;
+    will-change: transform;
+    transform-style: preserve-3d;
+  } */
   .slide-img-text {
     transform: translateY(-36vh);
   }
@@ -968,16 +940,8 @@ section {
     gap: 50px;
   }
   .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+    height: 16.55px;
+  }
   .carousel-track {
     padding: 80px 0;
   }
@@ -1029,6 +993,7 @@ section {
   .overwhelmed {
     display: none;
   }
+
   .hd1 {
     margin: 76px auto 11px;
   }
@@ -1098,16 +1063,8 @@ section {
     gap: 70.5px;
   }
   .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
+    height: 23px;
+  }
   .footer-section {
     min-height: unset;
   }
@@ -1173,246 +1130,6 @@ section {
   }
 }
 
-/* MacBook Pro M1 16-inch (1727 x 992 in-browser) */
-@media only screen and (min-width: 1727px) and (max-width: 1727px) and (min-height: 992px) {
-  .banner-section {
-    min-height: 992px;
-  }
-  .banner-wrap {
-    max-width: 91%;
-    padding-top: 60px;
-  }
-  .org-circle-con {
-    width: 80px;
-    height: 80px;
-  }
-  .org-circle-con lottie-player {
-    width: 250px !important;
-    height: 250px !important;
-  }
-  .hd1 {
-    margin: 80px auto 45px;
-  }
-  .hd1 lottie-player {
-    height: 16vw !important;
-  }
-  .banner-img img {
-    height: 3.8vw;
-  }
-  .hopeful {
-    left: 12rem;
-  }
-  .calm {
-    right: 12rem;
-  }
-  .balanced {
-    left: 15rem;
-    top: 18px;
-  }
-  .stressed {
-    right: 12rem;
-  }
-  .jealous {
-    top: 15px;
-  }
-  .cta {
-    gap: 8px;
-    padding: 10px 40px;
-  }
-  .cta .btn-icon {
-    height: 16px;
-    margin-top: -3px;
-  }
-  .cta .btn-txt img {
-    height: 12px;
-    margin-top: 5px;
-  }
-  .banner-images-con {
-    height: 85%;
-  }
-  .banner-images {
-    gap: 20%;
-  }
-  .slider-text {
-    font-size: 3.7vw;
-    text-shadow: 0 0 4.2vw rgb(0 0 0 / 20%);
-  }
-  .slider-img img {
-    height: 90vh;
-    border-radius: 5.3vh;
-  }
-  .dots {
-    left: 40px;
-    gap: 20px;
-  }
-  .dot {
-    width: 12px;
-    height: 12px;
-  }
-  .footer-section {
-    padding-bottom: 0;
-  }
-  .footer-sec-inner {
-    padding-bottom: 7vh;
-  }
-  .logo-slide img {
-    max-height: 48px;
-  }
-  .logo-slider-con .logo-slide {
-    margin: 0 80px;
-  }
-  .logo-slide.all-tech img,
-  .logo-slide.pc-mag img,
-  .logo-slide.abc img,
-  .logo-slide.fox-business img {
-    max-height: 55px;
-  }
-  .social-share {
-    gap: 6.5vw;
-    margin: 90px auto;
-  }
-  .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
-  .footer-menu-inner {
-    gap: 4.2vw;
-  }
-  .footer-menu-inner img {
-    height: 16px;
-  }
-  .copy-right-text img {
-    height: 1.1vw;
-  }
-}
-
-/* MacBook Air M1 13-inch (1440 x 848 in-browser fullscreen) */
-@media only screen and (min-width: 1440px) and (max-width: 1440px) and (min-height: 848px) {
-  .banner-section {
-    min-height: 848px;
-  }
-  .banner-wrap {
-    max-width: 90%;
-    padding-top: 50px;
-  }
-  .org-circle-con {
-    width: 65px;
-    height: 65px;
-  }
-  .org-circle-con lottie-player {
-    width: 200px !important;
-    height: 200px !important;
-  }
-  .hd1 {
-    margin: 70px auto 40px;
-  }
-  .hd1 lottie-player {
-    height: 15vw !important;
-  }
-  .banner-img img {
-    height: 3.5vw;
-  }
-  .hopeful {
-    left: 10rem;
-  }
-  .calm {
-    right: 10rem;
-  }
-  .balanced {
-    left: 13rem;
-    top: 15px;
-  }
-  .stressed {
-    right: 10rem;
-  }
-  .jealous {
-    top: 12px;
-  }
-  .cta {
-    gap: 7px;
-    padding: 9px 35px;
-  }
-  .cta .btn-icon {
-    height: 15px;
-    margin-top: -3px;
-  }
-  .cta .btn-txt img {
-    height: 11px;
-    margin-top: 4px;
-  }
-  .banner-images-con {
-    height: 82%;
-  }
-  .banner-images {
-    gap: 18%;
-  }
-  .slider-text {
-    font-size: 3.5vw;
-    text-shadow: 0 0 4vw rgb(0 0 0 / 19%);
-  }
-  .slider-img img {
-    height: 88vh;
-    border-radius: 5.1vh;
-  }
-  .dots {
-    left: 30px;
-    gap: 18px;
-  }
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
-  .footer-section {
-    padding-bottom: 0;
-  }
-  .footer-sec-inner {
-    padding-bottom: 6.5vh;
-  }
-  .logo-slide img {
-    max-height: 45px;
-  }
-  .logo-slider-con .logo-slide {
-    margin: 0 70px;
-  }
-  .logo-slide.all-tech img,
-  .logo-slide.pc-mag img,
-  .logo-slide.abc img,
-  .logo-slide.fox-business img {
-    max-height: 50px;
-  }
-  .social-share {
-    gap: 6vw;
-    margin: 80px auto;
-  }
-  .social-share img {
-  height: 38px;
-  width: auto;
-  transition: opacity 0.15s ease-in-out;
-  image-rendering: auto;
-  image-rendering: crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0);
-}
-  .footer-menu-inner {
-    gap: 4vw;
-  }
-  .footer-menu-inner img {
-    height: 14px;
-  }
-  .copy-right-text img {
-    height: 1vw;
-  }
-}
-
 /* Animation */
 @keyframes fadeIn {
   from {
@@ -1420,11 +1137,5 @@ section {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .social-share img.hover {
-    display: none !important;
   }
 }
