@@ -111,7 +111,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.66vw 2.99vw;
+  padding: 0.77vw 2.99vw;
   font-weight: 700;
   transition: all 0.2s;
   box-shadow: 0 16px 60px #ff5f444d;
@@ -415,7 +415,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 6.83vw;
-  margin: 78px auto;
+  margin: 96.9px auto;
 }
 .social-icon {
   display: flex;
