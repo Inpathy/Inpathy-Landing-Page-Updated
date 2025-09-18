@@ -995,7 +995,7 @@ section {
   }
 
   .hd1 {
-    margin: 82px auto 11px;
+    margin: 85px auto 14px;
   }
   .hd1 lottie-player {
     height: 27vw !important;
@@ -1019,7 +1019,7 @@ section {
   .depressed {
     left: 10px;
     position: absolute;
-    top: 280px;
+    top: 285px;
   }
   .cta {
     gap: 7px;
