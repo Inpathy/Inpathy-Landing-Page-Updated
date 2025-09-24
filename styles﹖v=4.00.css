@@ -1038,9 +1038,12 @@ section {
     font-size: 6.76vw;
     text-shadow: 0 0 58px rgb(0 0 0 / 41%);
   }
+/* Adjust the max-width to match your mobile breakpoint */
+@media (max-width: 768px) {
   .dots {
-    left: 15px;
+    display: none;
   }
+}
   .slider-img img {
     height: auto;
     max-width: 300px;
