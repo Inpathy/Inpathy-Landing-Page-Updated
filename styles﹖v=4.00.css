@@ -1130,6 +1130,41 @@ section {
   }
 }
 
+/* iPhone 14 Pro Max Portrait (1290 × 2234 in-browser) */
+@media screen and (width: 1290px) and (height: 2234px) {
+  .social-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.83vw;
+    margin: 96.9px auto;
+  }
+}
+
+/* MacBook Air M1 13-inch (1440 × 848 fullscreen only) */
+@media screen and (width: 1440px) and (height: 848px) {
+  .social-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.83vw;
+    margin: 80px auto;
+    /* styles only apply on EXACT width & height */
+  }
+}
+
+/* MacBook Pro M1 16-inch (1727 × 992 in-browser only) */
+@media screen and (width: 1727px) and (height: 992px) {
+  .social-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.83vw;
+    margin: 96.9px auto;
+    /* styles only apply on EXACT width & height */
+  }
+}
+
 /* Animation */
 @keyframes fadeIn {
   from {
