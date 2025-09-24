@@ -1142,8 +1142,8 @@ section {
   }
 }
 
-/* MacBook Air M1 13-inch (1440 × 789 fullscreen only) */
-@media screen and (width: 1440px) and (height: 789px) {
+/* MacBook Air M1 13-inch (1440 × 790 fullscreen only) */
+@media screen and (width: 1440px) and (height: 790px) {
   .social-share {
     display: flex;
     justify-content: center;
