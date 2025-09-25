@@ -31,10 +31,10 @@ $(window).on("scroll resize", function () {
   }
 
   var translateY = (1 - progress) * -32;
-  var brightness = 100 - 30 * progress;
+  var brightness = 100 - 35 * progress;
 
   if ($(window).width() <= 767) {
-    var brightness = 100 - 20 * progress;
+    var brightness = 100 - 35 * progress;
     var translateY = (1 - progress) * -36;
   }
 
@@ -197,10 +197,9 @@ $(window).on("scroll resize", function () {
             $(".bg-" + (currentStep - 1)).length &&
             $(".dot-" + (currentStep - 1)).length
           ) {
-            $(".sm-" + (currentStep - 1)).css(
-              "opacity",
+            $(".sm-" + (currentStep - 1)).css("opacity", 0);
               Math.max(0, 1 - stepProgress * 5)
-            );
+              
             $(".bg-" + (currentStep - 1)).css(
               "opacity",
               Math.max(0, 1 - stepProgress * 5)
