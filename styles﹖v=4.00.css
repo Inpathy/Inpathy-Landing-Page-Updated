@@ -1036,7 +1036,7 @@ section {
   }
   .slider-text {
     font-size: 7vw;
-    text-shadow: 0 0 58px rgb(0 0 0 / 41%);
+    text-shadow: 0 0 40px rgb(0 0 0 / 50%);
   }
 /* Adjust the max-width to match your mobile breakpoint */
 @media (max-width: 768px) {
