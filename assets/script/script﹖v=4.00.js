@@ -34,7 +34,7 @@ $(window).on("scroll resize", function () {
   var brightness = 100 - 30 * progress;
 
   if ($(window).width() <= 767) {
-    var brightness = 100 - 30 * progress;
+    var brightness = 100 - 20 * progress;
     var translateY = (1 - progress) * -36;
   }
 
@@ -53,6 +53,26 @@ $(window).on("scroll resize", function () {
 });
 
 $(".dot-1").css("opacity", 1);
+
+ // Handle opacity change when leaving header and reaching pink section
+$(window).on("scroll", function () {
+  var bannerSection = $(".banner-section");
+  var sliderSection = $(".slider-section");
+  var sliderImg = $(".slider-img.sm-1");
+  
+  var bannerHeight = bannerSection.outerHeight();
+  var scrollTop = $(window).scrollTop();
+  
+  // Check if user has scrolled slightly past the header (banner section)
+  var offset = bannerHeight * 4; // 10% of banner height as buffer
+  if (scrollTop >= bannerHeight + offset) {
+    // User has reached the pink section (slider section)
+    sliderImg.removeClass("force-visible").addClass("force-hidden");
+  } else {
+    // User is still in header section - force visible has higher priority
+    sliderImg.removeClass("force-hidden").addClass("force-visible");
+  }
+});
 
 //Slider Section
 $(window).on("scroll resize", function () {
@@ -197,9 +217,10 @@ $(window).on("scroll resize", function () {
             $(".bg-" + (currentStep - 1)).length &&
             $(".dot-" + (currentStep - 1)).length
           ) {
-            $(".sm-" + (currentStep - 1)).css("opacity", 0);
+            $(".sm-" + (currentStep - 1)).css(
+              "opacity",
               Math.max(0, 1 - stepProgress * 5)
-              
+            );
             $(".bg-" + (currentStep - 1)).css(
               "opacity",
               Math.max(0, 1 - stepProgress * 5)
