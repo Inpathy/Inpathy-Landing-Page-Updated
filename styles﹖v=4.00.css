@@ -1145,12 +1145,6 @@ section {
   }
 }
 
-.carousel-track {
-  position: relative;
-  height: 100%;
-  padding: 11.1vw 0;
-}
-
 /* MacBook Air M1 13-inch ~1240 × 1640  */
 @media screen and (min-width: 1240px) and (max-width: 1640px)
   and (min-height: 648px) and (max-height: 1048px) {
@@ -1163,12 +1157,6 @@ section {
   }
 }
 
-.carousel-track {
-  position: relative;
-  height: 100%;
-  padding: 12.5vw 0;
-}
-
 /* MacBook Pro M1 16-inch (1727 × 992 in-browser only) */
 @media screen and (width: 1727px) and (height: 992px) {
   .social-share {
@@ -1179,12 +1167,6 @@ section {
     margin: 96.9px auto;
     /* styles only apply on EXACT width & height */
   }
-}
-
-.carousel-track {
-  position: relative;
-  height: 100%;
-  padding: 11.1vw 0;
 }
 
 /* Animation */
