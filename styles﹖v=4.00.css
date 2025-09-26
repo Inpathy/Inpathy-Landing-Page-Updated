@@ -284,7 +284,7 @@ section {
   text-align: center;
   font-size: 3.56vw;
   line-height: 1.1;
-  text-shadow: 0 0 58px rgb(0 0 0 / 19%);
+  text-shadow: 0 0 70px rgb(0 0 0 / 40%);
   color: #fff;
   opacity: 0;
   z-index: 10;
@@ -1036,7 +1036,7 @@ section {
   }
   .slider-text {
     font-size: 7vw;
-    text-shadow: 0 0 40px rgb(0 0 0 / 50%);
+    text-shadow: 0 0 50px rgb(0 0 0 / 60%);
   }
 /* Adjust the max-width to match your mobile breakpoint */
 @media (max-width: 768px) {
