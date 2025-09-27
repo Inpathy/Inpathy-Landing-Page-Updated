@@ -1019,7 +1019,7 @@ section {
     left: 0;
   }
   .balanced {
-    left: unset;
+    left: 25px;
     right: 0;
   }
   .stressed {
