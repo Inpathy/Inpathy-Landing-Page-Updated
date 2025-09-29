@@ -1,7 +1,7 @@
 {
   "name": "Inpathy",
   "short_name": "Inpathy",
-  "description": "Inpathy is Find My, for moods. Check in together. Share together. Stay emotionally in sync.
+  "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
@@ -17,7 +17,5 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone",
-  "start_url": "/",
-  "scope": "/"
+  "display": "standalone"
 }
