@@ -113,7 +113,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.68vw 3vw;
+  padding: 0.75vw 3vw;
   font-weight: 700;
   transition: all 0.2s;
   box-shadow: 0 16px 60px #ff5f444d;
