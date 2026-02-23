@@ -68,13 +68,13 @@ section {
   z-index: 2;
 }
 .hd1 {
-  margin: 60px auto 30px;
+  margin: 60px auto 48px;
   display: flex;
   justify-content: center;
 }
 .hd1 lottie-player {
   width: 100% !important;
-  height: 16vw !important;
+  height: 15vw !important;
 }
 .org-circle-con {
   margin: 0 auto;
