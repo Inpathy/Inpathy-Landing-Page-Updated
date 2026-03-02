@@ -14,42 +14,106 @@ $(window).on("scroll", function () {
 });
 
 // brightness and opacity
-$(window).on("scroll resize", function () {
-  var $sliderContent = $(".slider-content");
-  var $slideImgText = $(".slide-img-text");
+var ticking = false;
 
-  var contentTop = $sliderContent.offset().top;
-  var windowHeight = $(window).height();
-  var scrollTop = $(window).scrollTop();
+var $window = $(window);
+var $sliderContent = $(".slider-content");
+var $slideImgText = $(".slide-img-text");
+var $brightnessImg = $(".sm-1 img.brightness");
+var $shadowImg = $(".slider-img.sm-1 img");
 
-  var distanceFromTop = contentTop - scrollTop;
-  var progress = 1 - distanceFromTop / windowHeight;
-  progress = Math.max(0, Math.min(progress, 1));
+var currentProgress = 0;   // animated value
+var targetProgress = 0;    // real scroll value
 
-  if (scrollTop === 0) {
-    progress = 0;
-  }
+function updateAnimation() {
+    var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
 
-  var translateY = (1 - progress) * -32;
-  var brightness = 100 - 35 * progress;
+    // Detect iOS Safari / Chrome (mobile only)
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua);
+    var isIOSChrome = isIOS && /CriOS/.test(ua);
+    var isIOSSafari = isIOS && /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS/.test(ua);
 
-  if ($(window).width() <= 767) {
-    var brightness = 100 - 35 * progress;
-    var translateY = (1 - progress) * -36;
-  }
+    var contentTop = $sliderContent[0].getBoundingClientRect().top;
 
-  $slideImgText.css("transform", "translateY(" + translateY + "vh)");
-  $(".sm-1 img.brightness").css("filter", "brightness(" + brightness + "%)");
-  $(".text-1").css("opacity", progress);
+    // Calculate real progress
+    targetProgress = 1 - contentTop / windowHeight;
+    targetProgress = Math.max(0, Math.min(targetProgress, 1));
 
-  //boxShadow
-  if ($(window).width() <= 480) {
-    var blur = 2004 - progress * (2004 - 200);
-    var opacity = 0.28 - progress * (0.28 - 0.07);
-    var boxShadow = `40px 60px ${blur}px rgba(0, 0, 0, ${opacity})`;
+    // If back to top, reset to original CSS positions
+    if (window.scrollY <= 0) {
+        currentProgress = 0;
+        targetProgress = 0;
 
-    $(".slider-img.sm-1 img").css("box-shadow", boxShadow);
-  }
+        // Mobile original transform
+        if (windowWidth <= 767) {
+            $slideImgText.css("transform", "translateY(-36.75vh)");
+        } else {
+            $slideImgText.css("transform", "");
+        }
+
+        $brightnessImg.css("filter", "");
+        $shadowImg.css("box-shadow", "");
+
+        ticking = false;
+        return;
+    }
+
+    // Smooth progress (lerp)
+    currentProgress += (targetProgress - currentProgress) * 0.12;
+
+    // Calculate translateY
+    var translateY;
+
+    if (windowWidth <= 767) {
+        var baseMobile;
+
+        if (isIOSChrome) {
+            baseMobile = -0.42 * windowHeight;       // iOS Chrome
+        } else if (isIOSSafari) {
+            baseMobile = -0.3790 * windowHeight;    // iOS Safari
+        } else {
+            baseMobile = -0.3675 * windowHeight;   // fallback
+        }
+
+        translateY = baseMobile * (1 - currentProgress);
+    } else {
+        var baseDesktop = -0.32 * windowHeight;
+        translateY = baseDesktop * (1 - currentProgress);
+    }
+
+    // Apply transform
+    $slideImgText.css("transform", "translateY(" + translateY + "px)");
+
+    // Brightness
+    var brightness = 100 - 35 * currentProgress;
+    $brightnessImg.css("filter", "brightness(" + brightness + "%)");
+
+    // Box-shadow for small screens
+    if (windowWidth <= 480) {
+      var blur = 200 - currentProgress * (200 - 150);
+        // var blur = 200 - currentProgress * 150;
+        var opacity = 0.28 - currentProgress * 0.21;
+
+        // var boxShadow = "40px 60px " + blur + "px rgba(0, 0, 0, " + opacity + ")";
+        // $shadowImg.css("box-shadow", boxShadow);
+    }
+
+    // Continue animating if not fully caught up
+    if (Math.abs(targetProgress - currentProgress) > 0.001) {
+        requestAnimationFrame(updateAnimation);
+    } else {
+        ticking = false;
+    }
+}
+
+// Listen to scroll/resize
+$window.on("scroll resize", function () {
+    if (!ticking) {
+        requestAnimationFrame(updateAnimation);
+        ticking = true;
+    }
 });
 
 $(".dot-1").css("opacity", 1);
