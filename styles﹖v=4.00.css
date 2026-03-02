@@ -777,7 +777,7 @@ section {
     transform-style: preserve-3d;
   } */
   .slide-img-text {
-    transform: translateY(-36vh);
+    transform: translateY(-36.5vh);
   }
   .banner-wrap {
     max-width: 88%;
